@@ -51,6 +51,11 @@ let g:clang_complete_copen = 0
 set pumheight=15
 set completeopt =menu,menuone,longest
 
+"Gui(gvim) options)
+set guioptions-=m "menu bar
+set guioptions-=T "toolbar
+set guioptions-=r "scrollbar
+
 
 "Omnicpp
 "set nocp
