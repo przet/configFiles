@@ -57,7 +57,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\e[0;34m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\[\e[0;32m\]\w\[\033[00m\]\$ ' 
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
     #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\e[0;33m\u@\h\[\033[00m\]:\[\033[01;34m\]\e[0;25m\w\[\033[00m\]\$ ' 
 
 else
@@ -134,3 +134,10 @@ fi
 #Env Variable Settings
 LS_COLORS=$LS_COLORS:'di=0;33' 
 export LS_COLORS
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/share/rvm/bin:/usr/share/rvm/bin
+
+#Disable the capslock button!
+#if ["$PS1"]; then
+    xmodmap -e "remove lock = Caps_Lock"
+#fi
+#Thanks to https://www.peterbe.com/plog/blogitem-041021-1
