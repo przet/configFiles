@@ -1,3 +1,4 @@
+set nohlsearch "no search highlights
 set splitright "vsplit opens new file on right
 set splitbelow "spilt opens new file below
 "The below map does not work...maybe something to do with plugins loaded
@@ -8,8 +9,8 @@ let loaded_matchparen=1
 inoremap jk <ESC>
 "map <C-L>:nohl<CR><C-L>
 "set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set softtabstop=8
+set shiftwidth=8
 set expandtab
 set showcmd
 set wildmenu
@@ -19,7 +20,8 @@ syntax on
 "set background=dark
 "set t_Co=256
 "let g:desert_termcolors=256
-colorscheme desert
+"colorscheme cobalt
+colorscheme desert 
 set number
 "Some addition based on the vim help example vimrc file
 if has("vms")
@@ -55,6 +57,11 @@ set completeopt =menu,menuone,longest
 set guioptions-=m "menu bar
 set guioptions-=T "toolbar
 set guioptions-=r "scrollbar
+
+""Typescript syntax plugin
+au BufRead, BufNewFile *.ts
+setfiletype typescript
+
 
 
 "Omnicpp
