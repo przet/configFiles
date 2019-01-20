@@ -9,8 +9,8 @@ let loaded_matchparen=1
 inoremap jk <ESC>
 "map <C-L>:nohl<CR><C-L>
 "set tabstop=4
-set softtabstop=8
-set shiftwidth=8
+set softtabstop=4
+set shiftwidth=4
 set expandtab
 set showcmd
 set wildmenu
