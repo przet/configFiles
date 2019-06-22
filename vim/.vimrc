@@ -1,3 +1,4 @@
+set nohlsearch "no search highlights
 set splitright "vsplit opens new file on right
 set splitbelow "spilt opens new file below
 "The below map does not work...maybe something to do with plugins loaded
@@ -20,6 +21,7 @@ syntax on
 "set t_Co=256
 "let g:desert_termcolors=256
 colorscheme cobalt
+"colorscheme desert 
 set number
 "Some addition based on the vim help example vimrc file
 if has("vms")
@@ -55,3 +57,7 @@ set completeopt =menu,menuone,longest
 set guioptions-=m "menu bar
 set guioptions-=T "toolbar
 set guioptions-=r "scrollbar
+
+""Typescript syntax plugin
+au BufRead, BufNewFile *.ts
+setfiletype typescript
