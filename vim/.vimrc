@@ -57,6 +57,9 @@ set completeopt =menu,menuone,longest
 set guioptions-=m "menu bar
 set guioptions-=T "toolbar
 set guioptions-=r "scrollbar
+set guifont=Monospace\ 9
+set columns=110
+set lines=50
 
 ""Typescript syntax plugin
 au BufRead, BufNewFile *.ts
