@@ -20,9 +20,11 @@ syntax on
 "set background=dark
 "set t_Co=256
 "let g:desert_termcolors=256
-colorscheme cobalt
+"colorscheme cobalt
 "colorscheme desert 
-set number
+colorscheme gotham 
+set nonumber
+set linebreak
 "Some addition based on the vim help example vimrc file
 if has("vms")
     set nobackup
@@ -57,9 +59,10 @@ set completeopt =menu,menuone,longest
 set guioptions-=m "menu bar
 set guioptions-=T "toolbar
 set guioptions-=r "scrollbar
-set guifont=Monospace\ 9
-set columns=110
-set lines=50
+"set guifont=Monospace\ 10
+set guifont=Lucida_Console:h8
+set columns=180
+set lines=70
 
 ""Typescript syntax plugin
 au BufRead, BufNewFile *.ts
