@@ -22,7 +22,10 @@ syntax on
 "let g:desert_termcolors=256
 "colorscheme cobalt
 "colorscheme desert 
-colorscheme gotham 
+"colorscheme gotham 
+"colorscheme space-vim-dark 
+"colorscheme github 
+colorscheme OceanicNext 
 set nonumber
 set linebreak
 "Some addition based on the vim help example vimrc file
@@ -34,6 +37,8 @@ endif
 
 "This tells Vim to keep a backup copy of a file when overwriting it (but not
 "on the VMS system...I need to find out what this is!
+set backupdir=N:\\backups\\vim\\backup,.
+"set dir=N:\\backups\\vim\\swap\\,.
 
 set history=50
 set autoindent
