@@ -20,12 +20,6 @@ syntax on
 "set background=dark
 "set t_Co=256
 "let g:desert_termcolors=256
-"colorscheme cobalt
-"colorscheme desert 
-"colorscheme gotham 
-"colorscheme space-vim-dark 
-"colorscheme github 
-colorscheme OceanicNext 
 set nonumber
 set linebreak
 "Some addition based on the vim help example vimrc file
@@ -61,13 +55,22 @@ set pumheight=15
 set completeopt =menu,menuone,longest
 
 "Gui(gvim) options)
-set guioptions-=m "menu bar
-set guioptions-=T "toolbar
-set guioptions-=r "scrollbar
-"set guifont=Monospace\ 10
-set guifont=Lucida_Console:h8
-set columns=180
-set lines=70
+if has ("gui_running")
+    
+    try
+        colorscheme OceanicNext
+    catch /^Vim\%((\a\+)\)\=:E185/
+        colorscheme desert
+    endtry
+    
+    set guioptions-=m "menu bar
+    set guioptions-=T "toolbar
+    set guioptions-=r "scrollbar
+    "set guifont=Monospace\ 10
+    set guifont=Lucida_Console:h8
+    set columns=180
+    set lines=70
+endif
 
 ""Typescript syntax plugin
 au BufRead, BufNewFile *.ts
